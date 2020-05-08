@@ -28,7 +28,7 @@ public class BaseTest {
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
-		Reporter.log("==== Browser Test End ====", true);
+		Reporter.log("===== Browser Test End =====", true);
 	}
 
 }
