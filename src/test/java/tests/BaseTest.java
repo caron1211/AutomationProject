@@ -23,12 +23,12 @@ public class BaseTest {
 		testContext.setAttribute("WebDriver", this.driver);
 		driver.get("https://www.saucedemo.com/");
 
-	}
+	} 
 
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
-		Reporter.log("===== Browser Test End =====", true);
+		Reporter.log("==== Browser Test End ====", true);
 	}
 
 }
