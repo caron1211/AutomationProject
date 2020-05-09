@@ -30,7 +30,7 @@ public class Checkout_test extends BaseTest {
 		item.openCart();
 		Cart ca = new Cart(driver);
 		String actualMsg = ca.valueOfItems();
-		Assert.assertEquals(actualMsg, "4");
+		Assert.assertEquals(actualMsg, "4","exepted for 4 items");
 	}
 
 	@Test
