@@ -39,7 +39,7 @@ public class Thanks extends BasePage{
 			System.out.println("Test failed");
 		}
 	}
-	
+	 
 	public void logOut() {
 		click(menuBtn);
 		click(logOutBtn);

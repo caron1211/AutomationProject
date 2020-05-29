@@ -6,17 +6,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class Finish extends BasePage{
 
-	@FindBy(css = ".complete-header")
-	private WebElement completeText;
 	@FindBy(css = ".subheader")
 	private WebElement titleFinishPage;
 
 	public Finish(WebDriver driver) {
 		super(driver);
-	}
-
-	public String finishMsg() {
-		return completeText.getText();
 	}
 	
 	public String titleFinish() {

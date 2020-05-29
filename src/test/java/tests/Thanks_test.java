@@ -77,8 +77,8 @@ public class Thanks_test extends BaseTest{
 
 	@Test
 	public void t07_finishOrder() {
-		Thanks finish = new Thanks(driver);
-		finish.finishMsg();
+		Thanks valid = new Thanks(driver);
+		valid.finishMsg(); 
 	}
 
 	@Test //screenshot 
