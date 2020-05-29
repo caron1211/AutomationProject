@@ -11,7 +11,6 @@ public class Finish extends BasePage{
 	@FindBy(css = ".subheader")
 	private WebElement titleFinishPage;
 
-	
 	public Finish(WebDriver driver) {
 		super(driver);
 	}
