@@ -21,7 +21,5 @@ public abstract class BasePage {
 
 	public void click(WebElement el) {
 		el.click();
-		
-
-	} 
+	}
 }

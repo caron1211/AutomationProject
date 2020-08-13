@@ -29,8 +29,6 @@ public class Cart extends BasePage {
 	private WebElement loginsuccess;
 	@FindBy(css = ".cart_desc_label")
 	private WebElement backToCart;
-	
-	
 
 	public Cart(WebDriver driver) {
 		super(driver);
@@ -43,32 +41,30 @@ public class Cart extends BasePage {
 	public void removeItem() {
 		click(removeBtn);
 	}
-	
+
 	public void continueShopping() {
 		click(continueBtn);
 	}
-	
+
 	public void numOfItems() throws InterruptedException {
 		Thread.sleep(1000);
 		String num = valueOfItems.getText();
 		double a = Double.valueOf(num);
 		System.out.println("The number of the items is: " + a);
 	}
-	
+
 	public String valueOfItems() {
 		String noi = valueOfItems.getText();
 		return noi;
 	}
-	
-	public String loginSuccess () {
+
+	public String loginSuccess() {
 		String losc = loginsuccess.getText();
 		return losc;
 	}
-	
+
 	public String backToCart() {
 		String btc = backToCart.getText();
 		return btc;
 	}
-
-	
 }

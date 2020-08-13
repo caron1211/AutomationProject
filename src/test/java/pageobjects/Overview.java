@@ -16,9 +16,8 @@ public class Overview extends BasePage {
 	private WebElement tax;
 	@FindBy(css = ".summary_info div.summary_total_label")
 	private WebElement total;
-	@FindBy (css = ".subheader")
+	@FindBy(css = ".subheader")
 	private WebElement titleOverviewPage;
-	
 
 	public Overview(WebDriver driver) {
 		super(driver);
@@ -32,18 +31,17 @@ public class Overview extends BasePage {
 		String num = saurceCard.getText();
 		System.out.println(num);
 	}
-	
+
 	public String valSaurceCard() {
 		String val = saurceCard.getText();
 		return val;
 	}
 
-
 	public void itemTotal() {
 		String num = itemTotal.getText();
 		System.out.println(num);
 	}
-	
+
 	public String valItemTotal() {
 		String val = itemTotal.getText();
 		return val;
@@ -53,7 +51,7 @@ public class Overview extends BasePage {
 		String num = tax.getText();
 		System.out.println(num);
 	}
-	
+
 	public String valTax() {
 		String val = tax.getText();
 		return val;
@@ -63,12 +61,12 @@ public class Overview extends BasePage {
 		String num = total.getText();
 		System.out.println(num);
 	}
-	
+
 	public String valTotal() {
 		String val = total.getText();
 		return val;
-	} 
-	
+	}
+
 	public String titleOverview() {
 		String to = titleOverviewPage.getText();
 		return to;

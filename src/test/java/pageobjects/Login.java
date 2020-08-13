@@ -32,10 +32,9 @@ public class Login extends BasePage {
 		String error = errormsg.getText();
 		return error;
 	}
-	
+
 	public String loginAfterLogout() {
-		String lal =  acceptedUserName.getText();
+		String lal = acceptedUserName.getText();
 		return lal;
-		} 
-	
+	}
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 public class Products extends BasePage {
+	
 	@FindBy(css = ".inventory_item_name")
 	private List<WebElement> list;
 	@FindBy(css = "#shopping_cart_container > a > svg > path")
@@ -39,11 +40,11 @@ public class Products extends BasePage {
 			}
 		}
 	}
-	
+
 	public void nameOfItem() {
 		click(nameOfItem);
 	}
-	
+
 	public void addToCart() {
 		click(addToCartBtn);
 	}
@@ -76,9 +77,8 @@ public class Products extends BasePage {
 		click(menuBtn);
 		click(logOutBtn);
 	}
-	
+
 	public void back() {
 		click(clickBack);
 	}
-
 }

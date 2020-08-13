@@ -1,15 +1,13 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageobjects.Cart;
 import pageobjects.Login;
 import pageobjects.Products;
 
-public class Products_test extends BaseTest{
-	
+public class Products_test extends BaseTest {
+
 	@Test
 	public void t01_loginSucceed() throws InterruptedException {
 		Login lp = new Login(driver);
@@ -68,7 +66,5 @@ public class Products_test extends BaseTest{
 		Login lg = new Login(driver);
 		String actualMsg = lg.loginAfterLogout();
 		Assert.assertEquals(actualMsg, "Accepted usernames are:");
-		
 	}
-
 }

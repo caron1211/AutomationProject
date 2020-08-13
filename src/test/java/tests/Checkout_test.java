@@ -2,7 +2,6 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageobjects.Cart;
 import pageobjects.Checkout;
 import pageobjects.Login;
@@ -10,7 +9,7 @@ import pageobjects.Overview;
 import pageobjects.Products;
 
 public class Checkout_test extends BaseTest {
-	
+
 	@Test
 	public void t01_loginSucceed() throws InterruptedException {
 		Login lp = new Login(driver);
@@ -30,7 +29,7 @@ public class Checkout_test extends BaseTest {
 		item.openCart();
 		Cart ca = new Cart(driver);
 		String actualMsg = ca.valueOfItems();
-		Assert.assertEquals(actualMsg, "4","exepted for 4 items");
+		Assert.assertEquals(actualMsg, "4", "exepted for 4 items");
 	}
 
 	@Test
@@ -48,7 +47,6 @@ public class Checkout_test extends BaseTest {
 		co.fillDetails("", "Varon", "7530249");
 		String expected = "Error: First Name is required";
 		String actual = co.errorMsg();
-
 		Assert.assertEquals(actual, expected);
 		Thread.sleep(2000);
 	}
@@ -61,5 +59,4 @@ public class Checkout_test extends BaseTest {
 		String actualMsg = ov.titleOverview();
 		Assert.assertEquals(actualMsg, "Checkout: Overview");
 	}
-
-} 
+}

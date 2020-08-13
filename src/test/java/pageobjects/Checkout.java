@@ -14,11 +14,10 @@ public class Checkout extends BasePage {
 	private WebElement zipCodeField;
 	@FindBy(css = "[type='submit']")
 	private WebElement continueBtm;
-	@FindBy(css="[data-test='error']")
+	@FindBy(css = "[data-test='error']")
 	private WebElement errormsg;
-	@FindBy (css = ".subheader")
+	@FindBy(css = ".subheader")
 	private WebElement titleCheckoutPage;
-	
 
 	public Checkout(WebDriver driver) {
 		super(driver);
@@ -30,12 +29,12 @@ public class Checkout extends BasePage {
 		fillText(zipCodeField, zipCode);
 		click(continueBtm);
 	}
-	
+
 	public String errorMsg() {
 		String a = errormsg.getText();
 		return a;
 	}
-	
+
 	public String titleCheckout() {
 		String tc = titleCheckoutPage.getText();
 		return tc;

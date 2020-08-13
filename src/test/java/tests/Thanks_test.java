@@ -2,12 +2,10 @@ package tests;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageobjects.Cart;
 import pageobjects.Checkout;
 import pageobjects.Finish;
@@ -16,7 +14,7 @@ import pageobjects.Overview;
 import pageobjects.Products;
 import pageobjects.Thanks;
 
-public class Thanks_test extends BaseTest{
+public class Thanks_test extends BaseTest {
 
 	@Test
 	public void t01_loginSucceed() throws InterruptedException {
@@ -25,7 +23,6 @@ public class Thanks_test extends BaseTest{
 		Cart ca = new Cart(driver);
 		String actualMsg = ca.loginSuccess();
 		Assert.assertEquals(actualMsg, "Products");
-		
 	}
 
 	@Test
@@ -78,16 +75,16 @@ public class Thanks_test extends BaseTest{
 	@Test
 	public void t07_finishOrder() {
 		Thanks valid = new Thanks(driver);
-		valid.finishMsg(); 
+		valid.finishMsg();
 	}
 
-	@Test //screenshot 
+	@Test // screenshot
 	public void t08_captureScreenshot() throws IOException {
-		
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		org.openqa.selenium.io.FileHandler.copy(scrFile, new File("./Screenshots/done_successfully.png"));
 	}
-	
+
 	@Test
 	public void t09_logOut() {
 		Thanks ty = new Thanks(driver);

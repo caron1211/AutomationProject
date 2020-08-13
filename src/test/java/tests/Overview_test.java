@@ -2,7 +2,6 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageobjects.Cart;
 import pageobjects.Checkout;
 import pageobjects.Finish;
@@ -54,7 +53,6 @@ public class Overview_test extends BaseTest {
 
 	@Test
 	public void t05_printSauceCard() {
-
 		Overview ov = new Overview(driver);
 		ov.numSaurceCard();
 		String val = ov.valSaurceCard();
@@ -66,7 +64,7 @@ public class Overview_test extends BaseTest {
 		Overview ov = new Overview(driver);
 		ov.itemTotal();
 		String val = ov.valItemTotal();
-		Assert.assertEquals(val, "Item total: $105.96000000000001");	
+		Assert.assertEquals(val, "Item total: $105.96000000000001");
 	}
 
 	@Test
@@ -74,7 +72,7 @@ public class Overview_test extends BaseTest {
 		Overview ov = new Overview(driver);
 		ov.tax();
 		String val = ov.valTax();
-		Assert.assertEquals(val, "Tax: $8.48");	
+		Assert.assertEquals(val, "Tax: $8.48");
 	}
 
 	@Test
@@ -82,16 +80,15 @@ public class Overview_test extends BaseTest {
 		Overview ov = new Overview(driver);
 		ov.total();
 		String val = ov.valTotal();
-		Assert.assertEquals(val, "Total: $114.44");	
+		Assert.assertEquals(val, "Total: $114.44");
 	}
-	
+
 	@Test
 	public void t09_finish() {
 		Overview ov = new Overview(driver);
 		ov.finish();
 		Finish fs = new Finish(driver);
 		String val = fs.titleFinish();
-		Assert.assertEquals(val, "Finish");	
+		Assert.assertEquals(val, "Finish");
 	}
-	
 }
