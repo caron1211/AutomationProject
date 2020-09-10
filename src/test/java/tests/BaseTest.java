@@ -4,7 +4,6 @@ import static io.restassured.RestAssured.*;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -34,21 +33,17 @@ public class BaseTest {
 		Response responseTime = requestSpec.get("https://www.saucedemo.com/");
 
 		// Print response time
-		System.out.println("Response Time : " + responseTime.getTime());
+		System.out.println("Response Time: " + responseTime.getTime());
 	}
 
 	@Test
 	public void getStatusCode() {
-		RequestSpecification httpRequest = RestAssured.given();
-		Response responseStatusCode = httpRequest.get("https://www.saucedemo.com/");
-		int statusCode = responseStatusCode.getStatusCode();
-		Assert.assertEquals(statusCode, 200, "Correct status code returned");
-	 }
+		given().log().ifValidationFails().when().get("https://www.saucedemo.com/").then().statusCode(200);
+	}
 
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
 		Reporter.log("======# Browser Test End #======", true);
 	}
-
 }
