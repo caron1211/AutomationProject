@@ -14,12 +14,6 @@
 		<aspectj.version>1.9.2</aspectj.version>
 	</properties>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>${aspectj.version}</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -37,12 +31,6 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>3.8.1</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-testng</artifactId>
-			<version>2.13.2</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 		<dependency>
@@ -63,12 +51,6 @@
 			<artifactId>hamcrest-core</artifactId>
 			<version>2.2</version>
 			<scope>test</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-rest-assured</artifactId>
-			<version>2.13.5</version>
 		</dependency>
 	</dependencies>
 
@@ -94,30 +76,7 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
-					<argLine>
-						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-					</argLine>
-					<systemProperties>
-						<property>
-							<name>allure.results.directory</name>
-							<value>${basedir}/target/allure-results</value>
-						</property>
-						<property>
-							<name>allure.link.issue.pattern</name>
-							<value>https://example.org/issue/{}</value>
-						</property>
-						<property>
-							<name>allure.link.tms.pattern</name>
-							<value>https://example.org/tms/{}</value>
-						</property>
-					</systemProperties>
 				</configuration>
-			</plugin>
-			<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
-			<plugin>
-				<groupId>io.qameta.allure</groupId>
-				<artifactId>allure-maven</artifactId>
-				<version>2.10.0</version>
 			</plugin>
 		</plugins>
 	</build>

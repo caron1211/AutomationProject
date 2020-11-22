@@ -1,9 +1,5 @@
 package tests;
 
-import java.io.File;
-import java.io.IOException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjects.inventory;
@@ -75,13 +71,6 @@ public class checkout_complete_test extends base_test {
 	public void t07_finishOrder() {
 		checkout_complete valid = new checkout_complete(driver);
 		valid.finishMsg();
-	}
-
-	@Test // screenshot
-	public void t08_captureScreenshot() throws IOException {
-
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		org.openqa.selenium.io.FileHandler.copy(scrFile, new File("./Screenshots/done_successfully.png"));
 	}
 
 	@Test
