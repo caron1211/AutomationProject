@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.*;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -14,7 +15,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class BaseTest {
+public class base_test {
 	WebDriver driver;
 
 	@BeforeClass
@@ -38,8 +39,11 @@ public class BaseTest {
 
 	@Test
 	public void getStatusCode() {
-		given().log().ifValidationFails().when().get("https://www.saucedemo.com/").then().statusCode(200);
+		RequestSpecification httpRequest = RestAssured.given();
+		Response response = httpRequest.get("https://www.saucedemo.com/");
+		System.out.println("Status code: " + response.getStatusCode());
 	}
+
 
 	@AfterClass
 	public void tearDown() {

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Overview extends BasePage {
+public class checkout_step_two extends base_page {
 
 	@FindBy(css = ".btn_action.cart_button")
 	private WebElement finishBtn;
@@ -19,7 +19,7 @@ public class Overview extends BasePage {
 	@FindBy(css = ".subheader")
 	private WebElement titleOverviewPage;
 
-	public Overview(WebDriver driver) {
+	public checkout_step_two(WebDriver driver) {
 		super(driver);
 	}
 

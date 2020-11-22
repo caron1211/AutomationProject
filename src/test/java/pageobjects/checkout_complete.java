@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Thanks extends BasePage {
+public class checkout_complete extends base_page {
 
 	@FindBy(css = "#checkout_complete_container > h2")
 	private WebElement completeHeader;
@@ -14,9 +14,16 @@ public class Thanks extends BasePage {
 	private WebElement menuBtn;
 	@FindBy(css = "#logout_sidebar_link")
 	private WebElement logOutBtn;
+	@FindBy(css = ".subheader")
+	private WebElement titleFinishPage;
 
-	public Thanks(WebDriver driver) {
+	public checkout_complete(WebDriver driver) {
 		super(driver);
+	}
+	
+	public String titleFinish() {
+		String tf = titleFinishPage.getText();
+		return tf;
 	}
 
 	public void printHeader() {

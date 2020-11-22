@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Login extends BasePage {
+public class login extends base_page {
 
 	@FindBy(css = "#user-name")
 	private WebElement userField;
@@ -17,7 +17,7 @@ public class Login extends BasePage {
 	@FindBy(css = "#login_credentials>h4")
 	private WebElement acceptedUserName;
 
-	public Login(WebDriver driver) {
+	public login(WebDriver driver) {
 		super(driver);
 	}
 

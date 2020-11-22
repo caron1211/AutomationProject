@@ -2,12 +2,11 @@ package pageobjects;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Cart extends BasePage {
+public class cart extends base_page {
 
 	@FindBy(css = ".checkout_button")
 	private WebElement clickCheckOut;
@@ -25,12 +24,10 @@ public class Cart extends BasePage {
 	private WebElement continueBtn;
 	@FindBy(css = ".fa-layers-counter.shopping_cart_badge")
 	private WebElement valueOfItems;
-	@FindBy(css = ".product_label")
-	private WebElement loginsuccess;
 	@FindBy(css = ".cart_desc_label")
 	private WebElement backToCart;
 
-	public Cart(WebDriver driver) {
+	public cart(WebDriver driver) {
 		super(driver);
 	}
 
@@ -56,11 +53,6 @@ public class Cart extends BasePage {
 	public String valueOfItems() {
 		String noi = valueOfItems.getText();
 		return noi;
-	}
-
-	public String loginSuccess() {
-		String losc = loginsuccess.getText();
-		return losc;
 	}
 
 	public String backToCart() {

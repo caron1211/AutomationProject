@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Checkout extends BasePage {
+public class checkout_step_one extends base_page {
 
 	@FindBy(css = "#first-name")
 	private WebElement firstNameField;
@@ -19,7 +19,7 @@ public class Checkout extends BasePage {
 	@FindBy(css = ".subheader")
 	private WebElement titleCheckoutPage;
 
-	public Checkout(WebDriver driver) {
+	public checkout_step_one(WebDriver driver) {
 		super(driver);
 	}
 

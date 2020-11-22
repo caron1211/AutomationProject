@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-public class Products extends BasePage {
+public class inventory extends base_page {
 	
 	@FindBy(css = ".inventory_item_name")
 	private List<WebElement> list;
@@ -27,9 +27,16 @@ public class Products extends BasePage {
 	private WebElement logOutBtn;
 	@FindBy(css = ".inventory_details_back_button")
 	private WebElement clickBack;
+	@FindBy(css = ".product_label")
+	private WebElement loginsuccess;
 
-	public Products(WebDriver driver) {
+	public inventory(WebDriver driver) {
 		super(driver);
+	}
+	
+	public String loginSuccess() {
+		String losc = loginsuccess.getText();
+		return losc;
 	}
 
 	public void chooseToItemsList(String name) {

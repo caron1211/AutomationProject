@@ -6,13 +6,13 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
- 	  <class name="tests.BaseTest"/>
- 	  <class name="tests.Login_test"/>
-      <class name="tests.Cart_test"/>
-      <class name="tests.Products_test"/>
-      <class name="tests.Checkout_test"/>
-      <class name="tests.Overview_test"/>
-      <class name="tests.Thanks_test"/>
+ 	  <class name="tests.base_test"/>
+ 	  <class name="tests.login_test"/>
+      <class name="tests.cart_test"/>
+      <class name="tests.inventory_test"/>
+      <class name="tests.checkout_step_one_test"/>
+      <class name="tests.checkout_step_two_test"/>
+      <class name="tests.checkout_complete_test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
