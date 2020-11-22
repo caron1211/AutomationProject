@@ -30,8 +30,6 @@ public class base_test {
 	public void getResponseTime() {
 		RequestSpecification requestSpec = RestAssured.given();
 		Response responseTime = requestSpec.get("https://www.saucedemo.com/");
-
-		// Print response time
 		System.out.println("Response Time: " + responseTime.getTime());
 	}
 
