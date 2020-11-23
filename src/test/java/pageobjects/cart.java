@@ -1,7 +1,5 @@
 package pageobjects;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,14 +10,6 @@ public class cart extends base_page {
 	private WebElement clickCheckOut;
 	@FindBy(css = "#cart_contents_container div:nth-child(6) button")
 	private WebElement removeBtn;
-	@FindBy(css = ".inventory_item_name")
-	private List<WebElement> list;
-	@FindBy(css = ".inventory_item_price")
-	private List<WebElement> listPrice;
-	@FindBy(css = ".inventory_item_name")
-	private WebElement nameItem;
-	@FindBy(css = ".inventory_details_back_button")
-	private WebElement backBtn;
 	@FindBy(css = "#cart_contents_container div.cart_footer > a.btn_secondary")
 	private WebElement continueBtn;
 	@FindBy(css = ".fa-layers-counter.shopping_cart_badge")
