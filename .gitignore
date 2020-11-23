@@ -6,9 +6,11 @@
 .allure
 .idea
 
+
 # Maven
 target/
 /bin
+
 
 # Test
 test-output/*
