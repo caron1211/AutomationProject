@@ -1,0 +1,15 @@
+tests\login_test.class
+pageobjects\base_page.class
+pageobjects\checkout_step_one.class
+tests\cart_test.class
+pageobjects\login.class
+tests\base_test.class
+tests\inventory_test.class
+pageobjects\checkout_complete.class
+tests\checkout_step_one_test.class
+tests\checkout_step_two_test.class
+utilities\DataProviders.class
+pageobjects\checkout_step_two.class
+pageobjects\inventory.class
+tests\checkout_complete_test.class
+pageobjects\cart.class
